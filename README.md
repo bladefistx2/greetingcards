@@ -1,4 +1,3 @@
-"# greetingcards" 
 Project Created by Yoel Feuermann.
 
 Used DB - Elasticsearch 6.2.4.
