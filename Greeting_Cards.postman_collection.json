@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "8902271b-4159-4e4f-8ac9-16d71958aaff",
+		"name": "Greeting Cards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ES Copy",
+			"item": [
+				{
+					"name": "DELETE index",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:9200/mytvschedule",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"mytvschedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get default card",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:9200/greetingcards/greetingcard/123",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"greetingcards",
+								"greetingcard",
+								"123"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get card",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/greetingCard/card/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"greetingCard",
+						"card",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get catalog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/greetingCard/catalog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"greetingCard",
+						"catalog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add card",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"hop on board\",\n\t\"template\":\"Greetings Mr. %s %s. Hop on board the %s boat. Enjoy the ride.\"\n}"
+				},
+				"url": {
+					"raw": "localhost/greetingCard/card/",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"greetingCard",
+						"card",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create card (fill template)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"Yoel\",\"Sela Group\"]"
+				},
+				"url": {
+					"raw": "localhost/greetingCard/card/123",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"greetingCard",
+						"card",
+						"123"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b94b90c6-31c0-4ebb-bef7-4eeec4c80b27",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e9fe8548-a57a-4cdb-8913-61b2d4d4fc93",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
